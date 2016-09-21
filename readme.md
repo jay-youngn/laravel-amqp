@@ -34,13 +34,13 @@ return [
 ### 2. 添加配置
 
 ```shell
-$ php artisan vendor:publish --provider="Gimq\MQServiceProvider"
+$ php artisan vendor:publish --provider="Gimq\Providers\MQServiceProvider"
 ```
 
 - 执行后将生成`config/amqp.php`文件
 - 需按照 connections.rabbitmq.queues 里的结构进行队列配置
 - 调用时只使用队列别名
-- 特别注意各队列的channel_id必须大于0且不能相同, 如嫌麻烦可以用 $i++ \_(:з」∠)\_
+- 特别注意各队列的channel_id必须大于0且不能相同（php-amqplib/php-amqplib里的设定）, 如嫌麻烦可以用 $i++ \_(:з」∠)\_
 
 ```php
 <?php
