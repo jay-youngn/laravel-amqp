@@ -5,7 +5,7 @@
 ### 0. 添加composer包
 ```javascript
 "require": {
-    "store59/amqp": "xxxxxxx"
+    "ginnerpeace/laravel-amqp": "xxxxxxx"
 }
 ```
 
@@ -19,12 +19,12 @@ return [
 
     'providers' => array(
         // ...
-        MQ59\Providers\MQServiceProvider::class,
+        Gimq\Providers\MQServiceProvider::class,
     ),
 
     'aliases' => array(
         // ...
-        'MQ' => MQ59\Facades\MQ::class,
+        'MQ' => Gimq\Facades\MQ::class,
     ),
 
     // ...
@@ -34,7 +34,7 @@ return [
 ### 2. 添加配置
 
 ```shell
-$ php artisan vendor:publish --provider="MQ59\MQServiceProvider"
+$ php artisan vendor:publish --provider="Gimq\MQServiceProvider"
 ```
 
 - 执行后将生成`config/amqp.php`文件
@@ -88,7 +88,7 @@ return [
 ```
 
 
-### 3. 调用
+### 3. 发送消息
 
 ```php
 <?php
@@ -118,3 +118,7 @@ MQ::batchPublish($msgClosure(), 'add_coupon');
 MQ::publish('message', 'add_coupon', TRUE);
 
 ```
+
+### 4. 消费
+
+敬请期待....
