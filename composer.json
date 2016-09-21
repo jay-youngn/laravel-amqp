@@ -1,0 +1,22 @@
+{
+	"name": "ginnerpeace/laravel-amqp",
+	"homepage": "https://github.com/ginnerpeace/laravel-amqp",
+	"description": "PHP实现的MQ工具类, 通过RabbitMQ测试. 使用方式基于Laravel ServiceProvider.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Gjy",
+			"email": "ginnerpeace@live.com"
+		}
+	],
+	"require": {
+		"php": ">=5.5.9",
+		"illuminate/support": "~5.1.41",
+		"php-amqplib/php-amqplib": "~2.6.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Gimq\\": "src"
+		}
+	}
+}
