@@ -11,7 +11,7 @@
 	],
 	"require": {
 		"php": ">=5.5.9",
-		"illuminate/support": "~5.1.41",
+		"illuminate/support": "~5.2.45",
 		"php-amqplib/php-amqplib": "~2.6.3"
 	},
 	"autoload": {
